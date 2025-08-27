@@ -15,7 +15,7 @@ public class NotaItemProduto implements Serializable {
     private Long id;
 
     @Column(nullable = false)
-    private Integer quantidade;
+    private Double quantidade;
 
     @ManyToOne
     @JoinColumn(name = "produto_id", nullable = false,
@@ -38,11 +38,11 @@ public class NotaItemProduto implements Serializable {
         this.id = id;
     }
 
-    public Integer getQuantidade() {
+    public Double getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(Integer quantidade) {
+    public void setQuantidade(Double quantidade) {
         this.quantidade = quantidade;
     }
 
