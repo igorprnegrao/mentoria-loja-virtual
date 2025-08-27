@@ -34,4 +34,16 @@ public class MarcaProduto implements Serializable {
     public void setNomeDescricao(String nomeDescricao) {
         this.nomeDescricao = nomeDescricao;
     }
+
+    @Override
+    public final boolean equals(Object o) {
+        if (!(o instanceof MarcaProduto that)) return false;
+
+        return getId().equals(that.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return getId().hashCode();
+    }
 }
