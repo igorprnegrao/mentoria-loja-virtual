@@ -19,10 +19,13 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "seq_usuario")
     private Long id;
 
+    @Column(nullable = false)
     private String login;
 
+    @Column(nullable = false)
     private String senha;
 
+    @Column(nullable = false)
     @Temporal(TemporalType.DATE)
     private Date dataAtualSenha;
 
